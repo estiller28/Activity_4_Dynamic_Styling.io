@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="assets/js/vue.js"></script>
+    <title>Reactivity in Action</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png" type="image/icon type">
+    <script src="assets/js/vue.js"></script>
+    <title>Dynamic Styling</title>
+</head>
+<body>
+    <header class="container">
+        <h1>Vue Styling</h1>
+    </header>
+
+    <section class="container" id="app">
+        <div class="input-field">
+            <input @keyup="getInput" type="text" v-model="user" placeholder="Username">
+
+            <div class="output" :class="[active ? 'visible' : 'hidden']" >
+                <p :class="{user1: user1, user2: user2}" >Style me!</p>
+            </div>
+        </div>
+  
+        <button  @click="btnToggler">Toggle Paragraph</button>
+        <input @keyup="chooseColor" type="text" placeholder="Choose: red/black/orange">
+        <p :style="{backgroundColor: activeColor}" >Style me inline!</p>
+    </section>
+</body>
+<script src="assets/js/app.js"></script>
+</html>
