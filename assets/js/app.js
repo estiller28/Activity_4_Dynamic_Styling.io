@@ -6,6 +6,7 @@ var app = new Vue({
         active: true,
         color:'',
         activeColor: '',
+        button: ''
     },
 
     methods:{
@@ -23,6 +24,12 @@ var app = new Vue({
         },
         btnToggler(){
             this.active = !this.active;
+
+                if(this.active === true){
+                    this.button = 'Hide'
+                }else{
+                    this.button = 'Show'
+                }
         },
 
         chooseColor(event){

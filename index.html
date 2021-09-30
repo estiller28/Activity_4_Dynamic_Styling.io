@@ -27,7 +27,7 @@
             </div>
         </div>
   
-        <button  @click="btnToggler">Toggle Paragraph</button>
+        <button  @click="btnToggler">{{button}}</button>
         <input @keyup="chooseColor" type="text" placeholder="Choose: red/black/orange">
         <p :style="{backgroundColor: activeColor}" >Style me inline!</p>
     </section>
