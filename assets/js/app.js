@@ -3,8 +3,6 @@ var app = new Vue({
     el: '#app',
     data:{
         user: '',
-        user1: false,
-        user2: false,
         active: true,
         color:'',
         activeColor: '',

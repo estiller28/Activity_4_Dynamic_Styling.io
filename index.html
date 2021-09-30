@@ -23,7 +23,7 @@
             <input @keyup="getInput" type="text" v-model="user" placeholder="Username">
 
             <div class="output" :class="[active ? 'visible' : 'hidden']" >
-                <p :class="{user1: user1, user2: user2}" >Style me!</p>
+                <p :class="user" >Style me!</p>
             </div>
         </div>
   
